@@ -8,13 +8,24 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @Column(name = "nickname", insertable = true)
     private String nickName;
     private String phone;
-//    @Basic(fetch = FetchType.LAZY, optional = false)
+    @Temporal(TemporalType.DATE)
     private Date signDate;
 
+    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REMOVE}, optional = false, fetch = FetchType.EAGER)
+    @JoinColumn(name = "author_wallet_id")
+    private Wallet wallet;
+
     public Author(){};
+
+    public Wallet getWallet() {
+        return wallet;
+    }
+
+    public void setWallet(Wallet wallet) {
+        this.wallet = wallet;
+    }
 
     public long getId() {
         return id;
