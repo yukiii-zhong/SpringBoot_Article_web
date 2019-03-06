@@ -26,6 +26,14 @@ public class Wallet {
         this.id = id;
     }
 
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
     public BigDecimal getBalance() {
         return balance;
     }
