@@ -13,7 +13,9 @@ public class Author {
     @Temporal(TemporalType.DATE)
     private Date signDate;
 
-    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REMOVE}, optional = false, fetch = FetchType.EAGER)
+    @OneToOne(cascade =
+            {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE},
+            optional = false, fetch = FetchType.EAGER)
     @JoinColumn(name = "author_wallet_id")
     private Wallet wallet;
 
