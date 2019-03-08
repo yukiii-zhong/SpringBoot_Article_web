@@ -1,7 +1,6 @@
 package com.kath.springbootjpa.web;
 
 import com.kath.springbootjpa.domain.Author;
-import com.kath.springbootjpa.service.AuthorServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

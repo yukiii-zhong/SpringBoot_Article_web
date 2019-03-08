@@ -4,8 +4,6 @@ import com.kath.springbootjpa.domain.Author;
 import com.kath.springbootjpa.domain.AuthorRepository;
 import com.kath.springbootjpa.domain.Wallet;
 import com.kath.springbootjpa.domain.WalletRepository;
-import com.kath.springbootjpa.service.AuthorService;
-import com.kath.springbootjpa.service.AuthorServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
 package com.kath.springbootjpa.service;
 
-public class CommentServiceImpl {
+public class TopicService {
 }
