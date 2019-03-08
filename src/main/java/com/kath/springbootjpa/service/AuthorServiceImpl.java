@@ -2,11 +2,15 @@ package com.kath.springbootjpa.service;
 
 import com.kath.springbootjpa.domain.Author;
 import com.kath.springbootjpa.domain.AuthorRepository;
+import com.kath.springbootjpa.domain.Wallet;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.math.BigDecimal;
 import java.util.Date;
 
+@Service
 public class AuthorServiceImpl implements AuthorService {
 
     @Autowired
@@ -19,12 +23,12 @@ public class AuthorServiceImpl implements AuthorService {
         author.setPhone("99999999");
         author.setNickName("Mike");
         author.setSignDate(new Date());
+        author.setWallet(new Wallet(new BigDecimal(0)));
         Author author1 = authorRepository.save(author);
 
         author1.setPhone("11111111");
         Author author2 = authorRepository.save(author1);
 
-        int i=8/0;
         return author2;
     }
 

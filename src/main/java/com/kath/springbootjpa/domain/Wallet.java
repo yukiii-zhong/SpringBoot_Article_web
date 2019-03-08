@@ -18,6 +18,10 @@ public class Wallet {
 
     public Wallet(){};
 
+    public Wallet(BigDecimal balance){
+        this.balance = balance;
+    }
+
     public Long getId() {
         return id;
     }

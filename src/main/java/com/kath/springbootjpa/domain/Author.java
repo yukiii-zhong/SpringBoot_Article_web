@@ -5,17 +5,19 @@ import java.util.Date;
 
 @Entity
 public class Author {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String nickName;
     private String phone;
+
     @Temporal(TemporalType.DATE)
     private Date signDate;
 
     @OneToOne(cascade =
             {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE},
-            optional = false, fetch = FetchType.EAGER)
+            optional = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "author_wallet_id")
     private Wallet wallet;
 
